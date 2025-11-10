@@ -7,4 +7,5 @@ urlpatterns = [
     path('logout/', views.logout_user),
     path('register/', views.register_user),
     path('chat/', views.chat),
+    path('is_authenticated/', views.is_authenticated),
 ]

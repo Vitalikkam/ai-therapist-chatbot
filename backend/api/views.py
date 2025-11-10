@@ -156,3 +156,11 @@ def chat(request):
 
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def is_authenticated(request):
+    """Check if the user is authenticated."""
+    return Response({'isAuthenticated': True}, status=status.HTTP_200_OK)
